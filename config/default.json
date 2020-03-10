@@ -1,0 +1,4 @@
+{
+  "_mongoURI": "mongodb+srv://diego123:diego12223@devconnector-y0oxl.mongodb.net/test?retryWrites=true&w=majority",
+  "mongoURI": "mongodb://127.0.0.1:27017/?compressors=snappy&gssapiServiceName=mongodb"
+}
