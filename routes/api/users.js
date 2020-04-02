@@ -40,7 +40,9 @@ router.post(
         res.status(400).json({ errors: [{ msg: 'User already exists' }] });
       }
 
+      /* cspell: disable-next-line */
       // Get users gravatar
+      /* cspell: disable-next-line */
       const avatar = gravatar.url(email, {
         s: '200',
         r: 'pg',
