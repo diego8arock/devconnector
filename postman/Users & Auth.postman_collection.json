@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7e7d4fca-8271-4ed6-92e1-442e71b935c7",
+		"_postman_id": "9619f310-2e7c-4414-851c-9cbe5a0335ca",
 		"name": "Users & Auth",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -30,6 +30,140 @@
 					"path": [
 						"api",
 						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get auth user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NWZjYmYyMTM3NTkzNDk5OTNmZDA4In0sImlhdCI6MTU4NTgzOTI5NSwiZXhwIjoxNTg2MTk5Mjk1fQ.0tteg7y_80iHCZWdciAFNvBNIuTgD26YJVG31tqSERg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"diegoa2000alt@gmail.com\",\n\t\"password\": \"123456\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get looged in user profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NWZjYmYyMTM3NTkzNDk5OTNmZDA4In0sImlhdCI6MTU4NTkyMzkyMiwiZXhwIjoxNTg2MjgzOTIyfQ.qm60PUJrRbqEPI-xjguIR2GEylzc_9xeQ524baw1AMI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save & Update Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NWZjYmYyMTM3NTkzNDk5OTNmZDA4In0sImlhdCI6MTU4NTkyMzkyMiwiZXhwIjoxNTg2MjgzOTIyfQ.qm60PUJrRbqEPI-xjguIR2GEylzc_9xeQ524baw1AMI",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"company\": \"Globant\",\n\t\"website\": \"www.globant.com\",\n\t\"location\": \"Bogotá\",\n\t\"bio\": \"SSRAV in Globant\",\n\t\"status\": \"Developer\",\n\t\"githubusername\": \"diego8arock\",\n\t\"skills\": \"HTML, Ruby, PHP\",\n\t\"youtube\":\"mychannel\",\n\t\"facebook\":\"\",\n\t\"twitter\":\"\",\n\t\"instagram\":\"\",\n\t\"linkedin\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
 					]
 				}
 			},
