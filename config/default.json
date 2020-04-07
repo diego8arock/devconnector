@@ -1,5 +1,7 @@
 {
   "mongoURI": "mongodb+srv://diego123:diego123@devconnector-y0oxl.mongodb.net/test?retryWrites=true&w=majority",
   "_mongoURI": "mongodb://127.0.0.1:27017/?compressors=snappy&gssapiServiceName=mongodb",
-  "jwtSecret": "newsecrettoken"
+  "jwtSecret": "newsecrettoken",
+  "githubClientId": "c93c94920ca2f0523a36",
+  "githubSecret": "46a066878597a1411cd625e2de74ffe25c2232a3"
 }
