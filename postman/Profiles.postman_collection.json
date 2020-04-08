@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "93da5730-a50d-4052-b6d8-e60cfbfad875",
+		"name": "Profiles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delete user and profile",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4YzljNWM4MDFlMjQzMTg0N2Q2OWMyIn0sImlhdCI6MTU4NjI3MzM3OCwiZXhwIjoxNTg2NjMzMzc4fQ.JvuCKM5b-LLa1QO9MzFhj-8X1s9hftfBRKlWl_E7vOM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create and Update Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NWZjYmYyMTM3NTkzNDk5OTNmZDA4In0sImlhdCI6MTU4NTkyMzkyMiwiZXhwIjoxNTg2MjgzOTIyfQ.qm60PUJrRbqEPI-xjguIR2GEylzc_9xeQ524baw1AMI",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"company\": \"Globant\",\n\t\"website\": \"www.globant.com\",\n\t\"location\": \"Bogotá\",\n\t\"bio\": \"SSRAV in Globant\",\n\t\"status\": \"Developer\",\n\t\"githubusername\": \"diego8arock\",\n\t\"skills\": \"HTML, Ruby, PHP\",\n\t\"youtube\":\"mychannel\",\n\t\"facebook\":\"\",\n\t\"twitter\":\"\",\n\t\"instagram\":\"\",\n\t\"linkedin\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get looged in user profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NWZjYmYyMTM3NTkzNDk5OTNmZDA4In0sImlhdCI6MTU4NTkyMzkyMiwiZXhwIjoxNTg2MjgzOTIyfQ.qm60PUJrRbqEPI-xjguIR2GEylzc_9xeQ524baw1AMI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all profiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user prifle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/user/5e85fcbf213759349993fd08",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"user",
+						"5e85fcbf213759349993fd08"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add experience",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NWZjYmYyMTM3NTkzNDk5OTNmZDA4In0sImlhdCI6MTU4NjI3NTY5NiwiZXhwIjoxNTg2NjM1Njk2fQ.0BoiWFjeHd5uwBXzYCpNoSrE-kY_R6EcvdQBurdo4UY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Developer\",\n\t\"company\": \"Maregiua\",\n\t\"location\": \"Bogota\",\n\t\"from\": \"1-5-2006\",\n\t\"to\": \"1-7-2009\",\n\t\"description\": \"Develop software junior\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add education",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NWZjYmYyMTM3NTkzNDk5OTNmZDA4In0sImlhdCI6MTU4NjI3NTY5NiwiZXhwIjoxNTg2NjM1Njk2fQ.0BoiWFjeHd5uwBXzYCpNoSrE-kY_R6EcvdQBurdo4UY"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"school\": \"Javeraina\",\n\t\"degree\": \"Bachelor\",\n\t\"fieldofstudy\": \"System engineer\",\n\t\"from\": \"1-5-2006\",\n\t\"current\": true,\n\t\"description\": \"High school stueden\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/education",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"education"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete profile experience",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NWZjYmYyMTM3NTkzNDk5OTNmZDA4In0sImlhdCI6MTU4NjI3NTY5NiwiZXhwIjoxNTg2NjM1Njk2fQ.0BoiWFjeHd5uwBXzYCpNoSrE-kY_R6EcvdQBurdo4UY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience/5e8ca99e9ce7f93f11bf1df8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience",
+						"5e8ca99e9ce7f93f11bf1df8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete profile education",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NWZjYmYyMTM3NTkzNDk5OTNmZDA4In0sImlhdCI6MTU4NjI3NTY5NiwiZXhwIjoxNTg2NjM1Njk2fQ.0BoiWFjeHd5uwBXzYCpNoSrE-kY_R6EcvdQBurdo4UY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/education/5e8cb077da7aa84241285e91",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"education",
+						"5e8cb077da7aa84241285e91"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Github",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/github/diego8arock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"github",
+						"diego8arock"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
