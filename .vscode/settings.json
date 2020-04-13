@@ -13,6 +13,7 @@
   "prettier.semi": true,
   "cSpell.ignoreWords": [
     "fieldofstudy",
+    "gravatar",
     "repos"
   ]
 }
